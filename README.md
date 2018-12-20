@@ -5,7 +5,9 @@ Your portfolio is a way to show the world who you really are. Expressing your ha
 ## Description of Tech
 - [Ruby on Rails](https://guides.rubyonrails.org/getting_started.html)
 - [jQuery](https://code.jquery.com/)
+- [Skeleton](http://getskeleton.com/)
 - [Google Fonts](https://fonts.google.com/)
+- [Font Awesome](https://fontawesome.com/)
 
 ## Thought Process
 At first, I drew the structure of my models, also showing an adaptive association with each other. I assembled well order links to my models to provide the user with a trouble-free experience. Secondly, I thought of ways of how the website would work, assigning suiteable names to elements, and then how to connect each part to it's necessary other. Finally I would then practice ways to make my code neater and more understandable.
