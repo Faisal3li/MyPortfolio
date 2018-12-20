@@ -1,0 +1,20 @@
+<div class="container">
+<%= form_for @project  do |f| %>
+    <%= f.label "Image" %>
+    <%= f.file_field :image %>
+    <br>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    <br>
+    <%= f.label :description %>
+    <%= f.text_field :description %>
+    <br>
+    <div class="collection">
+    <%= f.label :technology %>
+    <%= f.collection_check_boxes :technology_ids, Technology.all, :id, :name %> 
+    </div>
+    <br>
+    <br>
+  <%= f.submit %>
+<% end %>
+</div>

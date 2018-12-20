@@ -1,15 +1,230 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding-top: 80px;
+}
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  /* background: #1e88e5; */
+  height: 80px;
+  padding: 0 10px;
+  width: 100%;
+  color: #f8f8ff;
+  display: flex;
+  justify-content: center;
+  /* text-align: center; */
+  z-index: 2;
+}
+#grad {
+  background-image: linear-gradient(to right, #16161d, #16161d, #ffd700);
+}
+/* #gradFooter {
+  background-image: linear-gradient(to right, #16161d, #1e88e5);
+} */
+/* #grad2 {
+  background-image: linear-gradient(to right, #16161d, #1e88e5);
+} */
+
+nav a {
+  color: #f8f8ff;
+}
+.homepage {
+  margin-left: 150px;
+}
+.landing-page {
+  background-attachment: fixed;
+  background-image: url("Dadsoffice.jpeg");
+  background-size: cover;
+  background-position: center;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+section {
+  width: 100%;
+  padding: 50px 10%;
+}
+
+/* Pseudo-selector */
+section:nth-of-type(odd) {
+  background: #f5f5f5;
+}
+
+h3 {
+  text-decoration: underline;
+  text-decoration-color: dodgerblue;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col-4 {
+  width: calc(100% / 12 * 4);
+  padding: 20px;
+}
+
+.col-6 {
+  width: 50%;
+  padding: 20px;
+}
+
+img {
+  max-width: 100%;
+  border-radius: 50%;
+}
+
+@media (max-width: 768px) {
+  .sm-col-12 {
+    width: 100%;
+  }
+
+  img {
+    border-radius: 0;
+  }
+}
+
+footer {
+  width: 100%;
+  height: 100%;
+  padding: 50px 10%;
+  background-image: linear-gradient(to right, #16161d, #16161d, #ffd700);
+  /* background-image: radial-gradient(#1e88e5, #16161d, #16161d); */
+  color: #f8f8ff;
+  padding-left: 180px;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #16161d;
+  width: 150px;
+  height: 100%;
+  margin-top: 80px;
+
+  color: #f8f8ff;
+  display: flex;
+  justify-content: flex-start;
+  /* align-items: center; */
+  flex-direction: column;
+}
+.sidebar a {
+  color: white;
+}
+
+#training img {
+  height: 200px;
+  width: auto;
+  max-width: 100%;
+}
+#education img {
+  height: 200px;
+  width: auto;
+  max-width: 100%;
+}
+#projects img {
+  height: 200px;
+  width: auto;
+  max-width: 100%;
+}
+.showtainer {
+  display: flex;
+  flex-wrap: wrap;
+  /* flex-direction: column; */
+  justify-content: center;
+  margin: 100px;
+}
+
+.showtainer img {
+  height: 300px;
+  max-width: 100%;
+}
+.nameheader {
+  text-decoration: none;
+}
+.removeline {
+  text-decoration: none;
+}
+.julius {
+  font-family: "Julius Sans One", sans-serif;
+}
+.quicksand {
+  font-family: "Quicksand", sans-serif;
+}
+.k2d {
+  font-family: "K2D", sans-serif;
+}
+.meera {
+  font-family: "Meera Inimai", sans-serif;
+}
+.oleo {
+  font-family: "Oleo Script", cursive;
+}
+.roboto {
+  font-family: "Roboto", sans-serif;
+}
+.raleway {
+  font-family: "Raleway", sans-serif;
+}
+.major {
+  font-family: "Major Mono Display", monospace;
+}
+.nova {
+  font-family: "Nova Mono", monospace;
+}
+.kumar {
+  font-family: "Kumar One Outline", cursive;
+}
+.bungee {
+  font-family: "Bungee Hairline", cursive;
+}
+.textCenter {
+  text-align: center;
+}
+.collection {
+  display: block;
+  /* margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px; */
+  /* padding: 50px; */
+  width: 70%;
+}
+
+.collection label {
+  display: inline;
+}
+.blackText {
+  color: black;
+}
+.whiteText {
+  color: white;
+}
+h3 {
+  text-decoration: underline;
+  text-decoration-color: #ffd700;
+}
+.link {
+  color: #16161d;
+}
+a {
+  color: #16161d;
+}
+a:hover {
+  color: #ffd700 !important;
+}
+.font20 {
+  font-size: 20px;
+}
+.locoPic{
+  
+}

@@ -6,10 +6,34 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Bungee+Hairline|Julius+Sans+One|K2D|Kumar+One+Outline|Major+Mono+Display|Meera+Inimai|Nova+Mono|Oleo+Script:700|Quicksand|Raleway|Roboto" rel="stylesheet">
   </head>
-
+  
   <body>
+  <nav id="grad">
+    <h1><%= link_to 'Faisal A. Al-Qahtani', pages_home_path, class: "nameheader bungee" %></h1>
+  </nav>
+
     <%= yield %>
+<footer id="contact">
+        <h2 class="k2d">Contact Info</h2>
+     <div class="container">
+        <div class="col-6 sm-col-12">
+        <p><i class="fas fa-phone"><span class="meera"> +966 50 1212 900</span></i></p>
+        <p><i class="fas fa-envelope"><span class="meera"> alqahtanifam@gmail.com </span></i></p>
+        </div>
+        <div class="col-6 sm-col-12">
+        <p><i class="fab fa-linkedin-in"><span><a class="removeline meera whiteText" href="https://www.linkedin.com/in/faisalalial-qahtani/"> Faisal Al-Qahtani</a></span></i></p>
+        <p><i class="fab fa-github"><span><a class="removeline meera whiteText" href="https://github.com/Faisal3li"> Faisal3li</a></span></i></p>
+        </div>
+        <div class="col-6 sm-col-12">
+        <%= image_tag 'faisal.jpg' %> 
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

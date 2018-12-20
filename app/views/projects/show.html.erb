@@ -1,0 +1,12 @@
+<div class="showtainer">
+<div>
+<h1><%=@project.name%></h1>
+</div>
+<div>
+<img src=<%=@project.image%> alt="">
+</div>
+<div>
+<p><%= @project.description %></p>
+<p>Technologies | <%= @project.technologies.pluck(:name).join(", ")%></p>
+</div>
+</div>

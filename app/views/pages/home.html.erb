@@ -1,0 +1,113 @@
+<%= render partial: 'layouts/sidebar' %>
+<div class="homepage">
+<div class="landing-page">
+      <div>
+      
+      </div>
+    </div>
+
+    <section id="about">
+      <h3 class="k2d">About Me</h3>
+      <p class="roboto">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro
+        reprehenderit animi eveniet, modi maiores perferendis, ipsa, doloremque
+        debitis rerum quaerat voluptatem provident tempore autem dignissimos
+        deserunt ullam corrupti eum temporibus.
+      </p>
+      <p class="roboto">
+        Modi tempore dolore sequi minus vel sed aliquam at cumque nostrum amet.
+        Obcaecati adipisci laboriosam maxime dignissimos in, repellendus
+        recusandae corporis asperiores dolores nobis et officiis esse quis
+        tempore magni!
+      </p>
+      <p class="roboto">
+        Dolore accusamus debitis modi facilis magnam iste eos quis illum
+        recusandae accusantium rem omnis nulla labore doloremque inventore,
+        eaque, suscipit alias animi placeat beatae nesciunt repudiandae!
+        Laboriosam at suscipit temporibus.
+      </p>
+    </section>
+
+    <section id="education">
+      <h3 class="k2d">Education</h3>
+      <div class="container">
+      <% @educations.order("created_at desc").each do |e| %>
+        <div class="col-4 sm-col-12">
+          <img src=<%= e.image%> alt="" />
+          <h6><%= link_to "#{e.name}", education_path(e), class: "removeline k2d link font20"%></h6>
+          <h6 class="k2d"><%= e.place%></h6>
+          <h6 class="roboto"><%= e.description%></h6>
+          <h6 class="k2d"><%= e.start.strftime "%Y" %> - <%= e.end.strftime "%Y"%></h6>
+        </div>
+        <% end%>
+      </div>
+            <% if current_user && current_user.isAdmin == true %>
+            <%= link_to 'Add Education', new_education_path, class: "link font20" %>
+            <% end %>
+    </section>
+    <section id="training">
+    <h3 class="k2d"> Training / Certifications</h3>
+       <div class="container">
+      <% @trainings.order("created_at desc").each do |t| %>
+        <div class="col-4 sm-col-12">
+          <img src=<%= t.image%> alt="" />
+          <h6><%= link_to "#{t.name}", training_path(t), class: "removeline k2d link font20"%></h6>
+          <h6 class="k2d"><%= t.jobTitle%> | <%= t.place%> </h6>
+          <h6 class="roboto"><%= t.description%></h6>
+          <h6><%= t.start.strftime "%B %Y" %> - <%= t.end.strftime "%B %Y"%></h6>
+        </div>
+        <% end%>
+      </div>
+            <% if current_user && current_user.isAdmin == true %>
+            <%= link_to 'Add Training / Certifications', new_training_path, class:"link" %>
+            <% end %>
+    </section>
+    <section id="projects">
+    <h3>Projects</h3>
+      <div class="container">
+      <% @projects.order("created_at desc").each do |p| %>
+        <div class="col-4 sm-col-12">
+          <img src=<%= p.image%> alt="" />
+          <h6><%= link_to "#{p.name}", project_path(p), class: "removeline k2d link font20"%></h6>
+          <h6 class="roboto"><%= p.description%></h6>
+          <h6>Technologies | <%= p.technologies.pluck(:name).join(", ")%></h6>
+        </div>
+        <% end%>
+      </div>
+            <% if current_user && current_user.isAdmin == true %>
+            <%= link_to 'Add Project', new_project_path, class:"link font20" %>
+            <% end %>
+    </section>
+    <section id="skills">
+      <h3 class="k2d">Technical / Personal Skills</h3>
+      <div class="container">   
+        <div class="col-6 sm-col-12">
+          <h5 class="k2d">Technical</h5>
+          <ul>
+          <li class="roboto">
+            Web Design | HTML, CSS, JavaScript, Ruby, Ruby on Rails, jQuery,
+            Materialize, AJAX, JSON, React.js , and API Development.
+          </li>
+          <li class="roboto">
+          Cyber Security | Network+, Server+, CSP+, and CPTE.
+          </li>
+          </ul>
+        </div>
+        <div class="col-6 sm-col-12">
+          <h5 class="k2d">Personal</h5>
+          <ul>
+          <li class="roboto">
+            I have shown ability to initiate and create my own projects
+          </li>
+          <li class="roboto">
+            I am dependable, hard-working, and a fast learner.
+          </li>
+          <li class="roboto">
+            Skilled with time management and teamwork.
+          </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    
+</div>

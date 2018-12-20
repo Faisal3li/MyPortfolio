@@ -1,0 +1,26 @@
+<div class="container">
+<%= form_for @training  do |f| %>
+    <%= f.label "Image" %>
+    <%= f.file_field :image %>
+    <br>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    <br>
+    <%= f.label :Title %>
+    <%= f.text_field :jobTitle %>
+    <br>
+    <%= f.label :description %>
+    <%= f.text_field :description %>
+    <br>
+    <%= f.label :location %>
+    <%= f.text_field :place %>
+    <br>
+    <%= f.label :Start_Date %>
+    <%= f.date_select :start,  { :discard_day => true} %>
+    <%= f.label :End_Date %>
+    <%= f.date_select :end,  { :discard_day => true} %>
+    <br>
+    <br>
+  <%= f.submit %>
+<% end %>
+</div>

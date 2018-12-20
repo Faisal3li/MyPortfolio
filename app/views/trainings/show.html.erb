@@ -1,0 +1,13 @@
+<div class="showtainer">
+<div>
+<h1><%=@training.name%></h1>
+</div>
+<div>
+<img src=<%=@training.image%> alt="">
+</div>
+<div>
+<h5><%= @training.jobTitle %> | <%= @training.place%></h5>
+<p><%= @training.description %></p>
+<h6><%= @training.start.strftime "%Y" %> - <%= @training.end.strftime "%Y"%></h6>
+</div>
+</div>

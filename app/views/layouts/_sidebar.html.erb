@@ -1,0 +1,16 @@
+<div class="sidebar">
+    <div><a class= "removeline quicksand" id="1" href="#about">About</a></div>
+    <div><a class= "removeline quicksand" id="2" href="#education">Education</a></div>
+    <div><a class= "removeline quicksand" id="3" href="#training">Training / Certification</a></div>
+    <div><a class= "removeline quicksand" id="4" href="#projects">Projects</a></div>
+    <div><a class= "removeline quicksand" id="5" href="#skills">Technical / Personal Skills</a></div>
+    <div><a class= "removeline quicksand" id="6" href="#contact">Contact Info</a></div>
+    <br>
+    <br>
+    <% if !current_user.nil? %>
+            <%= link_to 'Log Out', destroy_user_session_path, method: :delete, class: "removeline quicksand" %>          
+        <% else %>
+            <%= link_to 'Log In', new_user_session_path, class: "removeline quicksand" %> 
+            <%= link_to 'Sign Up', new_user_registration_path, class: "removeline quicksand" %>
+    <% end %>
+</div>
